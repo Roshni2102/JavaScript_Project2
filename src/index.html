@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application Development</title>
+    <link rel="stylesheet" href="./input.css">
+</head>
+<body class="weather-body">
+    <div class="container1">
+<header>
+    <h1>Weather Forecast Application</h1>
+</header>
+    </div>
+    <div class="location-not-found">
+        <h1>Sorry, Location Not found!!!</h1>
+        <img src="./image/404-found-error-page.avif" class="img-not-found">
+    </div>
+    <div class="container2">
+        <aside>
+            <section id="form-section">
+            <form>
+                <label for="cityname">Enter a City Name:</label><br>
+                <input type="text" id="citybtn" name="cityname" placeholder="Enter city name">
+                <br>
+                <button id = "citybutton" class="text-white-400">Search</button><br>
+                ____________or____________
+                <br><br>
+                <script>
+                        function initMap() {
+                         searchLocation = new google.maps.Map(document.getElementById('mapContainer'), {
+                         center: { lat: -34.397, lng: 150.644 }, // Default center
+                         zoom: 8,
+                        });
+                        }
+                </script>
+                   <script id="mapUrl" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&callback=initMap"></script>
+                <button class="openpopupbtn" id="myLocationButton" type="submit">Your Location</button>
+                <div id="locationp=Popup" >
+                    <div id="mapPopup">
+                      <div class="popup-content">
+                        <span class="close-button" onclick="closePopup()">&times;</span>
+                        <div id="mapContainer"></div>
+                    </div>  
+                    </div>
+                    
+                </div>
+            </form>
+        </section>
+        </aside>
+    </div>
+    <div class="container3">
+      <main>
+        <section id="current-weather">
+            <d class="weather-info">
+                <h2 id="subheader1" class="">Current Weather</h2><br>
+                <h2 id="city">Republic of India, IN</h2>
+                <h2 id="temperature"> 25°C</h2>
+                <h5 id="day1description">cloudy</h5>
+                <h4 id="humidity" class="fa-solid fa-wind">Humidity: 77%</h4>
+                <h4 id="wind-speed">Wind Speed: 10.0km</h4>
+                <img id="curr-img" class="curr_img" src="image/heavy-rain-with-thunder-at-the-day.webp">
+        </section>
+      </main>
+    </div>
+    <div class="container4">
+        <footer>
+            <section id="forecast">
+            <div class="forecast-info">
+                <h2 id="subheader2">5-Days Forecast</h2>
+                
+                <div id="forecast-day1">
+                    <p class="forecast-day">
+                    <img id="day1img" class="img1" src="./image/clear.jpeg"><br>
+                    <h5 id="day1temp" class="temp text-black">27°C</h5>
+                    <h5 id="day1description">cloudy</h5>
+                    <h3 id="day1city" class="city text-black">Mumbai, IN</h3><br>
+                    <h5 id="day1humidity" class="humidity">Humidity: </h5>
+                    <h5 id="day1windspeed" class="WindSpeed">Wind Speed: </h5><br>
+                </p>
+                </div>                    
+                <div id="forecast-day2">
+                    <p  class="forecast-day">
+                    <img id="day2img" class="img1" src="./image/bright-heavy-rain.webp"><br>
+                    <h5 id="day2temp" class="temp text-black">27°C</h5>
+                    <h5 id="day2description">cloudy</h5>
+                    <h3 id="day2city" class="city text-black">Mumbai, IN</h3> <br>
+                    <h5 id="day2humidity" class="humidity">Humidity: </h5>
+                    <h5 id="day2windspeed" class="WindSpeed">Wind Speed: </h5><br>
+                </p>
+                </div>
+                <div id="forecast-day3">
+                    <p class="forecast-day">
+                    <img id="day3img"  class="img1" src="./image/day snow cloud.png"><br>
+                    <h5 id="day3temp" class="temp text-black">27°C</h5>
+                    <h5 id="day3description">cloudy</h5>
+                    <h3 id="day3city" class="city text-black">Mumbai, IN</h3> <br>
+                    <h5 id="day3humidity" class="humidity">Humidity: </h5>
+                    <h5 id="day3windspeed" class="WindSpeed">Wind Speed: </h5><br>
+                    </p>
+                </div>
+                 <div id="forecast-day4">
+                    <p class="forecast-day">
+                    <img id="day4img" class="img1" src="./image/wind.png"><br>
+                    <h5 id="day4temp" class="temp text-black">27°C</h5>
+                    <h5 id="day4description">cloudy</h5>
+                    <h3 id="day4city" class="city text-black">Mumbai, IN</h3> <br>
+                    <h5 id="day4humidity" class="humidity">Humidity: </h5>
+                    <h5 id="day4windspeed" class="WindSpeed">Wind Speed: </h5><br>
+                </p>
+                 </div>   
+                    <div id="forecast-day5">
+                    <p class="forecast-day">
+                    <img id="day5img" id="day5img" class="img1" src="./image/bright-heavy-rain.webp"><br>
+                    <h5 id="day5temp" class="temp text-black">27°C</h5>
+                    <h5 id="day5description">cloudy</h5>
+                    <h3 id="day5city" class="city text-black">Mumbai, IN</h3><br>     
+                    <h5 id="day5humidity" class="humidity">Humidity: </h5>
+                    <h5 id="day5windspeed" class="WindSpeed">Wind Speed: </h5><br>
+                </p>
+                </div>              
+            </section>
+        </footer>
+    </div>
+ <script src="input.js"></script>
+</body>
+</html>

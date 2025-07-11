@@ -1,0 +1,325 @@
+@import "tailwindcss";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(37, 36, 36);
+}
+/* style of full body */
+body{
+    display: grid;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(164, 177, 184);
+}
+
+/* tile name is display on  the so display none is given */
+title{
+    display: none;
+}
+
+/* body of weather style */
+.weather-body{
+    display: grid;
+    background-color: rgb(157, 194, 216);
+}
+
+.container{
+    border: 2px solid blue;
+}
+/* header style */
+header h1{
+   width: 100%;
+   height: 60px;
+   padding-top: 10px;
+   border: 2px solid rgb(94, 121, 128);
+   background-color: rgb(233, 237, 238);
+   text-align: center;
+}
+
+/* current weather image style */
+#curr-img{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 80%;
+    bottom: 40%;
+}
+
+/* if location is not fonnd it display and its style */
+.location-not-found{
+    display: none;
+    background-color: rgb(157, 194, 216);
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* the error image style */
+.img-not-found{
+    height: 200%;
+    width: 100%;
+}
+
+/* location not found error message display style */
+.location-not-found h1{
+    text-align: center;
+    
+}
+/* form section or container */
+.container2{
+    height: 200px;
+    width: 300px;
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(233, 237, 238);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/* form style were its a city and location search form */
+form{
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+/* lable style of city name and location  */
+.lable{
+   margin: 10px;
+   padding: 10px;
+}
+
+/* input style were city is entered */
+input{
+    border-radius: 5px;
+    font-size: small;
+    padding: 2px;
+    color: black;
+}
+
+/* city button or search city button style */
+#citybutton{
+   color: black;
+   margin-top: 10px;
+   width: 100px;
+   height: 24px;
+   border-radius: 8px;
+   background-color: rgb(122, 181, 192);
+   
+}
+/* hover is apply to the button to change color */
+#citybutton:hover{
+    background-color: rgb(136, 166, 172);
+}
+
+/* location button style  */
+#myLocationButton{
+   color: black;
+   margin-top: 10px;
+   width: 200px;
+   height: 24px;
+   border-radius: 8px;
+   background-color: rgb(122, 181, 192);
+   
+   
+}
+#locationbutton:hover{
+    background-color: rgb(125, 158, 165);
+} 
+
+#mapPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.popup-content {
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(93, 138, 151);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+#mapContainer {
+    height: 400px;
+    width: 600px;
+}
+ 
+
+/* current weather container */
+.weather-info{
+    height: 200px;
+    width: 800px;
+    border: 2px solid rgb(78, 137, 151);
+    border-radius: 10px;
+    background-color: rgb(248, 251, 252);
+    padding: 5px;
+    position: absolute;
+    top: 14%;
+    left: 30%;
+}
+
+.container4{
+    display: flex;
+    background-color: rgb(122, 181, 192);
+}
+#forecast{
+    margin-left: 20px;
+    color: black;
+    display: flex;
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    top: 10%  
+}
+
+#subheader2{
+    position: relative;
+    top: 270px
+}
+
+#forecast-day1
+{
+    color: black;
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(248, 251, 252);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    left: 9%;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
+#forecast-day2
+{
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(245, 248, 248);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    left: 170px;
+}
+
+#forecast-day3
+{
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(249, 251, 252);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    left: 330px;
+}
+#forecast-day4
+{
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(237, 241, 241);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    left: 490px;
+}
+#forecast-day5
+{
+    border: 2px solid rgb(78, 137, 151);
+    background-color: rgb(244, 246, 247);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    left: 650px;
+} 
+
+
+/*@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+    .container2{
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        left: 50px; 
+    }
+
+    #weather-info{
+        position: absolute;
+        top: 400px;
+        left: 30px;
+        height: 214px;
+        width: 665px;
+    }
+}*/
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .container2{
+        height: 200px;
+        width: 600px;
+        position: absolute;
+        left: 50px; 
+    }
+
+    #weather-info{
+        position: absolute;
+        top: 400px;
+        left: 30px;
+        height: 214px;
+        width: 665px;
+    }
+} /*
+
+@media only screen and (min-width: 700px) {
+    .item1 {grid-area: 1 / span 6;}
+    body{
+        font-size: small;
+        display: flex;
+    }
+  
+   header{
+    height: 30px;
+    font-size: small;
+    border: 1px solid rgb(78, 137, 151);
+   }
+
+   .weather-info{
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    right: auto;
+    height: fit-content;
+   }
+}

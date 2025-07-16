@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="input.css">
+    <script src="input.js" defer></script>
+    <!-- defer tells the browser to wait until the page has finished parsing before executing the script -->
+</head>
+<body>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="weather-input">
+          <h3>City Name:</h3>
+          <input id="city-input" alt="Please enter city name" type="text" placeholder="Enter a city name" required>
+          <button class="search-btn">Search</button>
+          <div class="separator"></div>
+          <button class="location-btn">Your location</button>
+        </div>
+        <div class="weather-data">
+          <div class="current-weather">
+            <!-- set as by default value -->
+            <div class="details">
+              <h2>India (2025-07-15)</h2>
+              <h4>Temperature: 26.43°C</h4>
+              <h4>Wind: 0.83 M/S</h4>
+              <h4>Humidity: 54%</h4>
+            </div>
+            <div class="icon">
+              <img src=" https://openweathermap.org/img/wn/10d@4x.png" alt="clear" class="weather-icon">
+              <h4>Few Clouds</h4>
+            </div>
+          </div>
+          <div class="days-forecast">
+            <h2>5-Day Forecast</h2>
+            <ul class="weather-cards">
+              <li class="card">
+                <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear" class="weather-icon">
+                <h3>(2025-07-15)</h3>
+                <h4>Temp: 27°C</h4>
+                <h4>Wind: 10.0 M/S</h4>
+                <h4>Humidity: 77%</h4> -->
+                <h4>Day1 Weather Details</h4>
+              </li>
+              <li class="card">
+                <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear" class="weather-icon">
+                <h3>(2025-07-15)</h3>
+                <h4>Temp: 27°C</h4>
+                <h4>Wind: 10.0 M/S</h4>
+                <h4>Humidity: 77%</h4> -->
+                <h4>Day2 Weather Details</h4>
+              </li>
+              <li class="card">
+                <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear" class="weather-icon">
+                <h3>(2025-07-15)</h3>
+                <h4>Temp: 27°C</h4>
+                <h4>Wind: 10.0 M/S</h4>
+                <h4>Humidity: 77%</h4> -->
+                <h4>Day3 Weather Details</h4>
+              </li>
+              <li class="card">
+                <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear" class="weather-icon">
+                <h3>(2025-07-15)</h3>
+                <h4>Temp: 27°C</h4>
+                <h4>Wind: 10.0 M/S</h4>
+                <h4>Humidity: 77%</h4> -->
+                <h4>Day4 Weather Details</h4>
+              </li>
+              <li class="card">
+                <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear" class="weather-icon">
+                <h3>(2025-07-15)</h3>
+                <h4>Temp: 27°C</h4>
+                <h4>Wind: 10.0 M/S</h4>
+                <h4>Humidity: 77%</h4> -->
+                <h4>Day5 Weather Details</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
